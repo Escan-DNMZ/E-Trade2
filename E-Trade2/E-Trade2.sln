@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Trade2", "E-Trade2\E-Trade2.csproj", "{FADC93E6-A350-46A2-9E4B-ADC20D999E69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FADC93E6-A350-46A2-9E4B-ADC20D999E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADC93E6-A350-46A2-9E4B-ADC20D999E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADC93E6-A350-46A2-9E4B-ADC20D999E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FADC93E6-A350-46A2-9E4B-ADC20D999E69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {673A1C81-D9CE-46FE-984A-66D87F4D7393}
+	EndGlobalSection
+EndGlobal

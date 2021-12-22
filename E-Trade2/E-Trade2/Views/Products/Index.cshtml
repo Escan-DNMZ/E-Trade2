@@ -1,0 +1,53 @@
+﻿@model IEnumerable<E_Trade2.Models.Products>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>Product Management</h1>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Product Image
+        </th>
+        <th>
+            Product Price
+        </th>
+        <th>
+            Category Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            <img src="/Image/@(item.ProductId).jpg" width="100"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categories.CategoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId },new {@class="btn btn-success" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId },new {@class="btn btn-primary" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId },new {@class="btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

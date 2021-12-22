@@ -1,0 +1,14 @@
+﻿@using E_Trade2.Models;
+@{
+    
+    List<Categories> categoriesList = ViewBag.CategoryList;
+}
+    <div class="col-md-3">
+        <h2>Categories</h2>
+        <ul>
+            @foreach (var item in categoriesList)
+            {
+                <li>@Html.ActionLink(item.CategoryName, "Categories", new { id = item.CategoryId })</li>
+            }
+        </ul>
+    </div>

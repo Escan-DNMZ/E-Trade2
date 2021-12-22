@@ -1,0 +1,34 @@
+﻿@model List<E_Trade2.Models.Products>
+@using E_Trade2.Models;
+@{
+    Categories Category = ViewBag.Category;
+    ViewBag.Title = Category.CategoryName;
+    List<Categories> categoriesList = ViewBag.CategoryList;
+}
+
+<div class="jumbotron">
+    <h1>Asp Net E-Trade Project</h1>
+</div>
+
+<div class="row">
+    @Html.Partial("/Views/Partial/Category.cshtml")
+
+    <div class="col-md-9">
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4" style="border:1px solid #808080">
+                    <img src="/Image/@(item.ProductId).jpg" style="max-width:100%" width="" />
+                    <p>@item.ProductName</p>
+                    <p>
+                        <a class="btn btn-primary" href="@Url.Action("Details","Products",new {id=item.ProductId })">Details</a>
+                        <span style="color:red;float:right;font-weight:bold;font-size:16px;">Price: @item.ProductPrice TL</span>
+                    </p>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+

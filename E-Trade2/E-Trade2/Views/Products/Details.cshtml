@@ -1,0 +1,58 @@
+﻿@model E_Trade2.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Product Name:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            Product Description:
+        </dt>
+
+        <dd>
+            @MvcHtmlString.Create(Model.ProductDescription)
+        </dd>
+
+        <dt>
+            Product Price:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            Product Image:
+        </dt>
+
+        <dd>
+            <img src="/Image/@(Model.ProductId).jpg" width="300" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categories.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categories.CategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit",new { @class = "btn btn-success"}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
