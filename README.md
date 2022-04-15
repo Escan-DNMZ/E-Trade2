@@ -1,6 +1,7 @@
 # E-Trade2
 AspNetMvc (Database First)
 Microsoft Authenication
+Deleted wwwroot directory because it's not my design
 
 https://user-images.githubusercontent.com/84273839/147120200-bc81b02c-955f-4e3f-b41f-69aa9538dd46.mp4
 
